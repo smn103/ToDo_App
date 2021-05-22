@@ -1,0 +1,74 @@
+<html>
+<head> 
+<title> ToDo App </title>
+ <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+ <link href="/styles.css" rel="stylesheet">
+ <style>
+ .buttonAdd {
+  background-color: #1d2e1e;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button {
+  background-color: #18701d;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+</style>
+ </head>
+
+
+<body>
+<div class="container">
+<center> <h1> ToDo List Application </h1>
+
+<form action ="/addtask" method="POST">
+
+<input type="text" name="newtask" placeholder="Add new Task in ToDo List">
+<button class="buttonAdd"> Add Task </button></center>
+
+<% if (task.length > 0) {%>
+<h2> Added Task </h2>
+
+<% for( var i = 0; i < task.length; i++){ %>
+	<h3><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %> </h3>
+<% } } 
+else {%>
+<h3>Congratulations, add the to do tasks are done! </h3>
+<% }%>
+<button formaction="/removetask" type="submit" id="top" class="button"> Done </button>
+</form>
+
+
+<% if (complete.length > 0) {%>
+<h2> Completed task </h2>
+
+ <% for(var i = 0; i < complete.length; i++){ %>
+	<h3><span>&#10003;</span>&nbsp;&nbsp;&nbsp;<%= complete[i] %> </h3>
+<% } } %>
+
+
+</div>
+
+</body>
+</html>
