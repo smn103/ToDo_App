@@ -39,7 +39,7 @@ app.post("/removetask", function(req, res) {
 
 //render the ejs and display added task, completed task
 app.get("/", function(req, res) {
-    res.render("app", { task: task, complete: complete });
+    res.render("index", { task: task, complete: complete });
 });
 
 //set app to listen on port 5000
