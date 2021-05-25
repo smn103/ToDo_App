@@ -4,10 +4,8 @@
   "description": "A simple to do list app ",
   "main": "app.js",
   "scripts": {
-	"start": "app.js",
-    "deploy": "npm cache clean --force && npm install && npm run build && npm run start"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Vanessa Ating",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.0",
