@@ -44,8 +44,8 @@ app.get("/", function(req, res) {
 });
 
 //set app to listen on port 8080
-var server = app.listen(8080, function() {
-    console.log("server is running on port 8080");
+var server = app.listen(8081, function() {
+    console.log("server is running on port 8081");
 });
 
 module.exports = server;
